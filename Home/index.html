@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sajjad-build</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🕰&lt;/text&gt;&lt;/svg&gt;">
+
+    <style>/* ! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.order-last{order:9999}.col-span-12{grid-column:span 12 / span 12}.col-span-4{grid-column:span 4 / span 4}.mx-auto{margin-left:auto;margin-right:auto}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.my-10{margin-top:2.5rem;margin-bottom:2.5rem}.my-12{margin-top:3rem;margin-bottom:3rem}.-ml-1{margin-left:-0.25rem}.-mt-12{margin-top:-3rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-7{margin-bottom:1.75rem}.ml-1{margin-left:0.25rem}.ml-4{margin-left:1rem}.ml-5{margin-left:1.25rem}.mr-1{margin-right:0.25rem}.mr-1\.5{margin-right:0.375rem}.mr-3{margin-right:0.75rem}.mr-5{margin-right:1.25rem}.mr-7{margin-right:1.75rem}.mr-8{margin-right:2rem}.mt-0{margin-top:0px}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-14{margin-top:3.5rem}.mt-2{margin-top:0.5rem}.mt-20{margin-top:5rem}.mt-24{margin-top:6rem}.mt-3{margin-top:0.75rem}.mt-32{margin-top:8rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.mr-2{margin-right:0.5rem}.ml-3{margin-left:0.75rem}.-ml-4{margin-left:-1rem}.-mr-4{margin-right:-1rem}.box-content{box-sizing:content-box}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-4{height:1rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-8{height:2rem}.h-96{height:24rem}.h-auto{height:auto}.h-full{height:100%}.h-0{height:0px}.h-0\.5{height:0.125rem}.min-h-screen{min-height:100vh}.w-1\/3{width:33.333333%}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-2\/3{width:66.666667%}.w-20{width:5rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-72{width:18rem}.w-8{width:2rem}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-screen-2xl{max-width:1536px}.max-w-screen-md{max-width:768px}.max-w-sm{max-width:24rem}.flex-shrink-0{flex-shrink:0}.translate-x-8{--tw-translate-x:2rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-full{--tw-translate-y:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-rotate-0{--tw-rotate:-0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-3{--tw-rotate:3deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-0{--tw-rotate:0deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-10{gap:2.5rem}.gap-14{gap:3.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-x-0 > :not([hidden]) ~ :not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(0px * var(--tw-divide-x-reverse));border-left-width:calc(0px * calc(1 - var(--tw-divide-x-reverse)))}.divide-gray-800 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(31 41 55 / var(--tw-divide-opacity))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-solid{border-style:solid}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity))}.border-gray-900{--tw-border-opacity:1;border-color:rgb(17 24 39 / var(--tw-border-opacity))}.border-pink-500{--tw-border-opacity:1;border-color:rgb(236 72 153 / var(--tw-border-opacity))}.border-purple-500{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity))}.border-transparent{border-color:transparent}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity))}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity))}.bg-pink-500{--tw-bg-opacity:1;background-color:rgb(236 72 153 / var(--tw-bg-opacity))}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-yellow-300{--tw-bg-opacity:1;background-color:rgb(253 224 71 / var(--tw-bg-opacity))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity))}.bg-opacity-5{--tw-bg-opacity:0.05}.bg-opacity-95{--tw-bg-opacity:0.95}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.bg-none{background-image:none}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-300{--tw-gradient-from:#93c5fd var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(147 197 253 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-400{--tw-gradient-from:#60a5fa var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(96 165 250 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-50{--tw-gradient-from:#f9fafb var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(249 250 251 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-300{--tw-gradient-from:#86efac var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(134 239 172 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-green-400{--tw-gradient-from:#4ade80 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(74 222 128 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-300{--tw-gradient-from:#a5b4fc var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(165 180 252 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-400{--tw-gradient-from:#818cf8 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(129 140 248 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-300{--tw-gradient-from:#f9a8d4 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(249 168 212 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-pink-400{--tw-gradient-from:#f472b6 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(244 114 182 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-yellow-300{--tw-gradient-from:#fde047 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(253 224 71 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-yellow-400{--tw-gradient-from:#facc15 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(250 204 21 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-gray-800{--tw-gradient-from:#1f2937 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(31 41 55 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-500{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(99 102 241 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-yellow-500{--tw-gradient-from:#eab308 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(234 179 8 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-500{--tw-gradient-from:#a855f7 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(168 85 247 / 0)  var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-blue-300{--tw-gradient-via-position: ;--tw-gradient-to:rgb(147 197 253 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #93c5fd var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-blue-400{--tw-gradient-via-position: ;--tw-gradient-to:rgb(96 165 250 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #60a5fa var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-purple-300{--tw-gradient-via-position: ;--tw-gradient-to:rgb(216 180 254 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #d8b4fe var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-purple-400{--tw-gradient-via-position: ;--tw-gradient-to:rgb(192 132 252 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #c084fc var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-red-300{--tw-gradient-via-position: ;--tw-gradient-to:rgb(252 165 165 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #fca5a5 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-red-400{--tw-gradient-via-position: ;--tw-gradient-to:rgb(248 113 113 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #f87171 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-yellow-500{--tw-gradient-via-position: ;--tw-gradient-to:rgb(234 179 8 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #eab308 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-indigo-600{--tw-gradient-via-position: ;--tw-gradient-to:rgb(79 70 229 / 0)  var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from), #4f46e5 var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-blue-300{--tw-gradient-to:#93c5fd var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-blue-400{--tw-gradient-to:#60a5fa var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-gray-900{--tw-gradient-to:#111827 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-green-300{--tw-gradient-to:#86efac var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-green-400{--tw-gradient-to:#4ade80 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-indigo-300{--tw-gradient-to:#a5b4fc var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-indigo-400{--tw-gradient-to:#818cf8 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-pink-300{--tw-gradient-to:#f9a8d4 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-pink-400{--tw-gradient-to:#f472b6 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-yellow-400{--tw-gradient-to:#facc15 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-yellow-700{--tw-gradient-to:#a16207 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-black{--tw-gradient-to:#000 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-red-500{--tw-gradient-to:#ef4444 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-blue-500{--tw-gradient-to:#3b82f6 var(--tw-gradient-to-position);--tw-gradient-to-position: }.bg-cover{background-size:cover}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.fill-current{fill:currentColor}.stroke-current{stroke:currentColor}.object-cover{object-fit:cover}.object-bottom{object-position:bottom}.object-center{object-position:center}.p-0{padding:0px}.p-0\.5{padding:0.125rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-10{padding:2.5rem}.p-4{padding:1rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-12{padding-left:3rem;padding-right:3rem}.px-16{padding-left:4rem;padding-right:4rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0{padding-top:0px;padding-bottom:0px}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-7{padding-top:1.75rem;padding-bottom:1.75rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-8{padding-left:2rem;padding-right:2rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-10{padding-bottom:2.5rem}.pb-3{padding-bottom:0.75rem}.pb-32{padding-bottom:8rem}.pb-5{padding-bottom:1.25rem}.pl-5{padding-left:1.25rem}.pt-20{padding-top:5rem}.pt-0{padding-top:0px}.pb-14{padding-bottom:3.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-6{line-height:1.5rem}.leading-7{line-height:1.75rem}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.text-blue-50{--tw-text-opacity:1;color:rgb(239 246 255 / var(--tw-text-opacity))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity))}.text-gray-100{--tw-text-opacity:1;color:rgb(243 244 246 / var(--tw-text-opacity))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-red-50{--tw-text-opacity:1;color:rgb(254 242 242 / var(--tw-text-opacity))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.text-yellow-300{--tw-text-opacity:1;color:rgb(253 224 71 / var(--tw-text-opacity))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-10{opacity:0.1}.opacity-100{opacity:1}.opacity-25{opacity:0.25}.opacity-30{opacity:0.3}.opacity-40{opacity:0.4}.opacity-5{opacity:0.05}.opacity-50{opacity:0.5}.opacity-75{opacity:0.75}.opacity-90{opacity:0.9}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-100{transition-duration:100ms}.duration-150{transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-200{transition-duration:200ms}.ease-in-out{transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)}.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.ease-in{transition-timing-function:cubic-bezier(0.4, 0, 1, 1)}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity))}.hover\:bg-gray-800:hover{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.hover\:text-gray-300:hover{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-400:hover{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.hover\:opacity-80:hover{opacity:0.8}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-gray-800:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(31 41 55 / var(--tw-ring-opacity))}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (prefers-color-scheme: dark){.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}}@media (min-width: 640px){.sm\:mb-20{margin-bottom:5rem}.sm\:ml-3{margin-left:0.75rem}.sm\:ml-4{margin-left:1rem}.sm\:mt-0{margin-top:0px}.sm\:mt-1{margin-top:0.25rem}.sm\:block{display:block}.sm\:hidden{display:none}.sm\:w-20{width:5rem}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-8{grid-template-columns:repeat(8, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:py-12{padding-top:3rem;padding-bottom:3rem}.sm\:py-16{padding-top:4rem;padding-bottom:4rem}.sm\:py-10{padding-top:2.5rem;padding-bottom:2.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:font-bold{font-weight:700}.sm\:font-extrabold{font-weight:800}.sm\:tracking-widest{letter-spacing:0.1em}}@media (min-width: 768px){.md\:order-first{order:-9999}.md\:col-span-4{grid-column:span 4 / span 4}.md\:col-span-6{grid-column:span 6 / span 6}.md\:col-span-8{grid-column:span 8 / span 8}.md\:mb-0{margin-bottom:0px}.md\:mb-10{margin-bottom:2.5rem}.md\:mb-16{margin-bottom:4rem}.md\:ml-20{margin-left:5rem}.md\:ml-8{margin-left:2rem}.md\:mt-4{margin-top:1rem}.md\:block{display:block}.md\:h-14{height:3.5rem}.md\:w-14{width:3.5rem}.md\:w-auto{width:auto}.md\:w-1\/2{width:50%}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:justify-between{justify-content:space-between}.md\:gap-12{gap:3rem}.md\:gap-5{gap:1.25rem}.md\:divide-x > :not([hidden]) ~ :not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px * var(--tw-divide-x-reverse));border-left-width:calc(1px * calc(1 - var(--tw-divide-x-reverse)))}.md\:border-l{border-left-width:1px}.md\:border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity))}.md\:px-16{padding-left:4rem;padding-right:4rem}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-12{padding-top:3rem;padding-bottom:3rem}.md\:px-0{padding-left:0px;padding-right:0px}.md\:pl-8{padding-left:2rem}.md\:pt-40{padding-top:10rem}.md\:text-center{text-align:center}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}}@media (min-width: 1024px){.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:ml-0{margin-left:0px}.lg\:mt-0{margin-top:0px}.lg\:block{display:block}.lg\:w-1\/2{width:50%}.lg\:w-auto{width:auto}.lg\:max-w-none{max-width:none}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-start{align-items:flex-start}.lg\:items-center{align-items:center}.lg\:justify-end{justify-content:flex-end}.lg\:justify-center{justify-content:center}.lg\:space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.lg\:divide-x-0 > :not([hidden]) ~ :not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(0px * var(--tw-divide-x-reverse));border-left-width:calc(0px * calc(1 - var(--tw-divide-x-reverse)))}.lg\:rounded-lg{border-radius:0.5rem}.lg\:bg-inherit{background-color:inherit}.lg\:bg-current{background-color:currentColor}.lg\:bg-transparent{background-color:transparent}.lg\:bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.lg\:bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.lg\:px-0{padding-left:0px;padding-right:0px}.lg\:px-16{padding-left:4rem;padding-right:4rem}.lg\:py-16{padding-top:4rem;padding-bottom:4rem}.lg\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.lg\:pr-32{padding-right:8rem}.lg\:pt-20{padding-top:5rem}.lg\:pl-12{padding-left:3rem}.lg\:pr-12{padding-right:3rem}.lg\:text-left{text-align:left}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-7xl{font-size:4.5rem;line-height:1}}@media (min-width: 1280px){.xl\:max-w-lg{max-width:32rem}.xl\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.xl\:px-16{padding-left:4rem;padding-right:4rem}.xl\:py-20{padding-top:5rem;padding-bottom:5rem}.xl\:text-2xl{font-size:1.5rem;line-height:2rem}.xl\:text-7xl{font-size:4.5rem;line-height:1}.xl\:leading-tight{line-height:1.25}}</style>    <link rel="stylesheet" href=""><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="w-full bg-black overflow-hidden">
+    <div class="max-w-7xl mx-auto px-10">
+        <div class="flex flex-col flex-wrap items-center justify-between py-7 mx-auto md:flex-row max-w-7xl">
+            <div class="relative flex flex-col md:flex-row">
+                <a href="#_" class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0">
+                    <span class="mx-auto text-2xl font-black leading-none text-gray-100 select-none">tails</span>
+                </a>
+                <nav class="flex flex-wrap items-center mb-5 text-lg md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-800">
+                    <a href="#_" class="mr-5 font-medium leading-6 text-gray-400 hover:text-gray-300">Home</a>
+                    <a href="#_" class="mr-5 font-medium leading-6 text-gray-400 hover:text-gray-300">Features</a>
+                    <a href="#_" class="mr-5 font-medium leading-6 text-gray-400 hover:text-gray-300">Pricing</a>
+                    <a href="#_" class="mr-5 font-medium leading-6 text-gray-400 hover:text-gray-300">Blog</a>
+                </nav>
+            </div>
+            <div class="inline-flex items-center ml-5 text-lg space-x-6 lg:justify-end">
+                <a href="#" class="text-base font-medium leading-6 text-gray-400 hover:text-gray-300 whitespace-no-wrap transition duration-150 ease-in-out"> Login </a>
+                <a href="#" class="inline-flex items-center justify-center px-4 py-2 font-medium leading-6 text-gray-200 hover:text-white whitespace-no-wrap bg-gray-800 border border-transparent rounded shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"> Signup </a>
+            </div>
+        </div>
+        <div class="flex lg:flex-row flex-col pt-20 md:pt-40 lg:pt-20">
+            <div class="w-full lg:w-1/2 flex lg:px-0 px-5 flex-col md:items-center lg:items-start justify-center -mt-12">
+                <h1 class="text-white text-3xl sm:text-5xl lg:max-w-none max-w-4xl lg:text-left text-left md:text-center xl:text-7xl font-black"> Start Your Next <br class="lg:block sm:hidden">Great Idea With <span class="bg-clip-text text-transparent bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 mt-1 lg:block">The TailsUI</span>
+                </h1>
+                <p class="text-gray-500 sm:text-lg md:text-xl xl:text-2xl lg:max-w-none max-w-2xl md:text-center lg:text-left lg:pr-32 mt-6">We've put together the worlds best landing pages to help you build your next project in style. Signup below to get started for free.</p>
+                <a href="#_" class="bg-white px-12 lg:px-16 py-4 text-center lg:py-5 font-bold rounded text-lg md:text-xl lg:text-2xl mt-8 inline-block w-auto"> Signup </a>
+                <p class="text-gray-400 font-normal mt-4">No credit card required. Signup for free.</p>
+            </div>
+            <div class="w-full lg:w-1/2 relative lg:mt-0 mt-20 flex items-center justify-center">
+                <img src="https://cdn.devdojo.com/images/march2022/mesh-gradient1.png" class="absolute lg:max-w-none max-w-3xl mx-auto mt-32 w-full h-full inset-0">
+                <img src="https://cdn.devdojo.com/images/march2022/hero-person.png" class="w-full md:w-auto w-72 max-w-md max-w-sm ml-4 md:ml-20 lg:ml-0 xl:max-w-lg relative">
+            </div>
+        </div>
+    </div>
+</section><section class="bg-black">
+    <div class="relative px-16 pt-20 pb-32 mx-auto max-w-7xl xl:px-16">
+        <svg class="relative z-10 w-16 mb-12 text-yellow-300 transform opacity-100 fill-current sm:w-20 -rotate-0 rotate rotate-3" data-primary="yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 46"><defs></defs><g fill-rule="nonzero"><path d="M46.651 2.666c1.892-.812 1.06-1.401-1.337-1.81A4.827 4.827 0 0044.323 0a3.914 3.914 0 00-.614.64C34.376-.395 11.639.36 8.676 1.976 6.99 1.437 1.364 9.542.344 13.552c-.436.1-.436.632-.12 1.487a.84.84 0 00.1.28v-.05a2.8 2.8 0 00.247.668h.06c2.814 5.749 14.356 19.796 15 20.673l-.149-.158c2.418 2.587 3.963 5.547 6.291 8.17 2.626 2.213 3.478 1.437 3.399-.065 2.784-1.171 3.289-3.73 4.775-5.655 5.608-7.904 14.742-14.651 19.498-22.763a2.347 2.347 0 00-.09-.575c1.725-2.429-.296-9.018-2.704-12.898zM38.25 24.093c-4.38 5.863-12.355 11.432-13.693 18.15-.33-.903-.903-1.75-1.684-2.493C15.987 31.616 10.4 22.828 3.088 14.931c3.101-1.997 3.636-6.021 5.469-8.615l-.09.187.199-.41-.06.13.08-.151c.31-1.051.463-2.123.455-3.198.876.312 1.796.553 2.745.719 10.333-.633 20.805-.144 31.129-.417.198 1.71 1.387 3.514 1.982 5.094 0-.057 0-.122-.08-.18 1.11 2.243.803 4.937 2.616 6.92-2.953 1.337-8.342 8.048-9.283 9.083zM7.5 14.505v-.01.01z"></path><path d="M9.567 12.925c-.022.243.175.468.486.556 0 .065.05.13.08.094l.139-.05h.069c-1.015.233-1.858.754-2.341 1.445.908.243 1.84.436 2.787.578.208.5.484.985.824 1.445v.094-.036c.387.607.763 1.214 1.16 1.814v-.072c.516.816.992 1.64 1.548 2.457.555.817 1.13 1.9 1.736 2.782a.241.241 0 01-.05-.08c1.587 2.169 2.599 4.59 4.444 6.635 3.482 2.002-.536-3.874-1.2-4.777-1.101-1.662-2.232-3.324-3.294-5-.892-1.446-1.845-2.892-2.787-4.337-.149-.354-.298-.65-.446-.925 2.975-.152 5.951-.455 8.927-.513 3.849-.145 7.737 0 11.606 0-.466 1.604-.526 4.025-.992 4.85-.387 3.403-3.968 7.096-2.46 10.37.605-.477 1.029-1.06 1.23-1.692 1.21-4.43 3.918-8.99 3.75-13.535 2.579.03 5.159-.045 7.727-.224 3.65-.853 3.134-2.32-.546-2.349h.218c-2.55.05-5.098.058-7.648.05a27.367 27.367 0 00-3.095-5.181.511.511 0 01-.089-.13c-1.408 1.257.308 3.714 1.597 5.304-4.85 0-9.7 0-14.551.217h.218c-2.113.333-5.168.116-7.53.564.165-.11.255-.265.249-.427a.376.376 0 000-.151c2.48-2.212 7.241-8.166 3.115-6.367l-4.88 6.59zm3.68 3.526a.19.19 0 010 .065.285.285 0 010-.08v.015zM11.5 17.505v-.01z"></path><path d="M14.499 21.55v-.1a.54.54 0 010 .1zM41.874 10c.462-1.423-.366-2.884-2.197-3.876A.87.87 0 0139.522 6c-1.373.757.287 2.644 1.266 3.49.303.209.671.382 1.086.51zM40.5 9.505v-.01z"></path></g></svg>
+
+        <div class="relative z-20">
+            <h3 class="text-5xl font-bold leading-tight text-left text-white md:text-6xl lg:text-7xl xl:text-7xl xl:leading-tight">Every great design begins with an even greater story...</h3>
+            <div class="flex flex-col mt-14 sm:flex-row sm:items-center">
+                <p class="text-xl font-normal text-left text-yellow-300" data-primary="yellow-400">Use our designs to tell your story</p>
+                <div class="flex mt-5 space-x-1 sm:mt-1 sm:ml-3">
+                    <div class="w-10 h-2 bg-yellow-300 rounded-full opacity-100" data-primary="yellow-400"></div>
+                    <div class="w-8 h-2 bg-yellow-300 rounded-full opacity-75" data-primary="yellow-400"></div>
+                    <div class="w-4 h-2 bg-yellow-300 rounded-full opacity-50" data-primary="yellow-400"></div>
+                    <div class="w-3 h-2 bg-yellow-300 rounded-full opacity-25" data-primary="yellow-400"></div>
+                    <div class="w-2 h-2 bg-yellow-300 rounded-full opacity-10" data-primary="yellow-400"></div>
+                    <div class="w-2 h-2 bg-yellow-300 rounded-full opacity-5" data-primary="yellow-400"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 mt-24 gap-14 lg:grid-cols-3">
+            <div class="flex text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current" data-primary="yellow-400" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19 11v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"></path><path d="M13 13l9 3l-4 2l-2 4l-3 -9"></path><line x1="3" y1="3" x2="3" y2="3.01"></line><line x1="7" y1="3" x2="7" y2="3.01"></line><line x1="11" y1="3" x2="11" y2="3.01"></line><line x1="15" y1="3" x2="15" y2="3.01"></line><line x1="3" y1="7" x2="3" y2="7.01"></line><line x1="3" y1="11" x2="3" y2="11.01"></line><line x1="3" y1="15" x2="3" y2="15.01"></line></svg>
+                <div class="relative space-y-2">
+                    <h4 class="text-xl font-bold leading-relaxed">140+ hand-crafted designs &amp; templates</h4>
+                    <p class="text-lg text-gray-300">Hundreds of designs to build amazing landing pages for your application.
+                </p></div>
+            </div>
+
+            <div class="flex text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current" data-primary="yellow-400" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 13.5v-7.5a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-6m-8 -10h16m-10 -6v11.5m-8 3.5h7m-3 -3l3 3l-3 3"></path></svg>
+                <div class="relative space-y-2">
+                    <h4 class="text-xl font-bold leading-relaxed">Easily import &amp; export into any existing app</h4>
+                    <p class="text-lg text-gray-300">All templates can be easily be exported and imported into any of your applications.
+                </p></div>
+            </div>
+
+            <div class="flex text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-20 h-20 mr-8 text-yellow-300 stroke-current" data-primary="yellow-400" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2"></path><path d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9"></path><path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12"></path><line x1="17" y1="17" x2="17" y2="17.01"></line></svg>
+                <div class="relative space-y-2">
+                    <h4 class="text-xl font-bold leading-relaxed">Customize and modify to make it your own</h4>
+                    <p class="text-lg text-gray-300">Change the text, color, font, and many other aspects to make it your own.
+                </p></div>
+            </div>
+        </div>
+    </div>
+</section><div class="py-10 bg-black sm:py-12 lg:py-16">
+    <div class="px-12 pb-5 mx-auto max-w-screen-2xl md:px-16">
+        <div class="mb-10 md:mb-16">
+            <h2 class="mb-4 text-3xl font-bold text-left text-gray-100 lg:text-5xl md:text-center md:mb-10">Our <span class="relative inline-block text-transparent bg-gradient-to-br from-indigo-300 via-blue-300 to-green-300 bg-clip-text">Awesome
+                    <svg class="absolute hidden w-2/3 h-auto mt-1 text-gray-100 transform translate-x-8 fill-current md:block" viewBox="0 0 76 12" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero"><path d="M71.531 4.853c-2.199-.224-4.183-.188-6.265-.193-4.063-.011-8.125-.88-12.188-.85-9.099.079-18.339-.421-27.47.402-2.697.239-5.391.442-8.061.786-.256.031-.51.063-.767.099-2.505.328-5.775.136-8.265.48-2.192.457-3.891 1.03-5.99.874-.557-.108-1.15-.303-1.484-.698C.312 4.905-.027 4.129.326 3.482c.115-.213.313-.432.527-.629.417-.366.917-.653 1.189-.678 4.692-.5 10.015-.594 14.255-.683 2.093-.042 4.254-.099 6.896-.208 6.104-.156 15.729-.256 21.839-.406 5.339-.135 10.692.609 15.979 1.162 2.01.209 3.276.209 5.078.266.301.004.641.015.99.025 1.781.057 4.989-.224 6.025.317 1.037.547 1.761.604 2.667 1.609.048.991-.317 1.449-.78 1.615-1.079.396-2.068.839-2.907.975-.983.156-1.776.162-1.937-.213-.156-.376-.068-.609.088-.781.271-.281.76-.589 1.198-.797l.098-.203Z"></path><path d="M28.744 9.336c1.677-.088 3.364-.203 5.036-.142 2.115.074 3.907.314 6.006.281.708-.009 5.016.005 5.604-.004 1.833-.032 3.636-.026 5.464.025 1.213.036 2.432.109 3.636.251 2.833.333 5.76.557 8.547 1.192.708.162 1.432.297 2.145.167.708-.125 1.792-.5 1.719-1.276-.083-.907-.833-2.036-1.735-2.322-.276-.084-.911-.475-1.192-.533-.265-.052-.5-.238-.745-.27-.578-.078-1.011.188-1.547.318-.625.151-1.979-.272-2.625-.287-2.281-.057-3.609.525-5.891.505-1.348-.01-2.703-.052-4.052-.074-1.295-.021-2.593.017-3.885-.052-.902-.046-1.792-.292-2.687-.312-.767-.016-1.543.125-2.297.276-.645.135-1.355.078-2.01.083-.599.011-1.333-.14-1.891 0-.719.183-1.517.188-2.25.26-1.38.136-2.074-.109-3.448.063-.855.104-1.486.432-2.339.313-.437-.063-1.557.219-1.994.172-.449-.042-.48.28-.885.333-.491.061-.986.047-1.475.067-.208.011-.766-.011-.911.152-.204.224.203.687.509.818 1.121.489 2.74.098 3.922.057.422-.014.845-.035 1.271-.061Z"></path></g></svg>
+                </span> Features</h2>
+
+            <p class="max-w-screen-md mx-auto text-left text-gray-300 md:text-lg md:text-center">
+                We pride ourselves in the features that our application provides. We have been trusted by over 500+ companies to take their business to the next level.
+            </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-3 md:gap-12">
+            <!-- feature - start -->
+            <div class="flex gap-4 md:gap-5 bg-gradient-to-br group from-yellow-400 via-red-400 to-pink-400 rounded-2xl p-0.5">
+                <div class="flex gap-4 p-5 bg-gray-900 md:gap-5 bg-opacity-5 rounded-2xl">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-white rounded-full md:w-14 md:h-14 bg-gradient-to-br from-yellow-300 via-red-300 to-pink-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-white md:text-xl">Analytics</h3>
+                        <p class="mb-2 text-sm text-red-50">Full analytics so you can get insight to what your customers and users are doing.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- feature - end -->
+
+            <!-- feature - start -->
+            <div class="flex gap-4 md:gap-5 cursor-pointer bg-gradient-to-br from-green-400 via-blue-400 to-indigo-400 rounded-2xl p-0.5">
+                <div class="flex gap-4 p-5 bg-gray-900 md:gap-5 bg-opacity-5 rounded-xl">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-white rounded-full md:w-14 md:h-14 bg-gradient-to-br from-green-300 via-blue-300 to-indigo-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-white md:text-xl">Messaging</h3>
+                        <p class="mb-2 text-sm text-blue-50">Messaging system where your users can communicate and interact together.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- feature - end -->
+
+            <!-- feature - start -->
+            <div class="flex gap-4 md:gap-5 cursor-pointer bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 rounded-2xl p-0.5">
+                <div class="flex gap-4 p-5 bg-gray-900 md:gap-5 bg-opacity-5 rounded-xl">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-white rounded-full md:w-14 md:h-14 bg-gradient-to-br from-blue-300 via-purple-300 to-pink-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"></path></svg>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-white md:text-xl">Insights</h3>
+                        <p class="mb-2 text-sm text-blue-50">Gain insights into all the events that are fired in your web and mobile applications.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- feature - end -->
+
+            <!-- feature - start -->
+            <div class="flex gap-4 md:gap-5 cursor-pointer bg-gradient-to-br from-indigo-400 via-blue-400 to-green-400 rounded-2xl p-0.5">
+                <div class="flex gap-4 p-5 bg-gray-900 md:gap-5 bg-opacity-5 rounded-xl">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-white rounded-full md:w-14 md:h-14 bg-gradient-to-br from-indigo-300 via-blue-300 to-green-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-white md:text-xl">Payments</h3>
+                        <p class="mb-2 text-sm text-blue-50">Easily accept payments easily within your applications using our intuitive API.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- feature - end -->
+
+            <!-- feature - start -->
+            <div class="flex gap-4 md:gap-5 cursor-pointer bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 rounded-2xl p-0.5">
+                <div class="flex gap-4 p-5 bg-gray-900 md:gap-5 bg-opacity-5 rounded-xl">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-white rounded-full md:w-14 md:h-14 bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"></path></svg>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-white md:text-xl">Customizations</h3>
+                        <p class="mb-2 text-sm text-blue-50">You can customize the look and feel of every aspect inside your customer portal.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- feature - end -->
+
+            <!-- feature - start -->
+            <div class="flex gap-4 md:gap-5 bg-gradient-to-br group from-pink-400 via-red-400 to-yellow-400 rounded-2xl p-0.5">
+                <div class="flex gap-4 p-5 bg-gray-900 md:gap-5 bg-opacity-5 rounded-xl">
+                    <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-white rounded-full md:w-14 md:h-14 bg-gradient-to-br from-yellow-300 via-red-300 to-pink-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path></svg>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-white md:text-xl">Plugins</h3>
+                        <p class="mb-2 text-sm text-red-50">Hundreds of plug-ins for you to use to modify the functionality of your application.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- feature - end -->
+
+        </div>
+    </div>
+</div><section class="relative w-full py-10 bg-black bg-opacity-95 sm:py-16">
+
+    <div class="absolute inset-0 w-full h-full bg-blue-900 opacity-10"></div>
+    <div class="max-w-6xl px-10 mx-auto">
+        <div class="flex justify-between w-full pb-5">
+            <div class="flex flex-col items-start sm:flex-row sm:items-center">
+                <div class="px-3 py-2 text-sm font-medium text-white uppercase bg-gray-800">Trending Now</div>
+                <a href="#_" class="mt-3 text-white transition duration-300 ease-out opacity-40 sm:ml-4 sm:mt-0 hover:opacity-80">Top Resources for Web Developers</a>
+            </div>
+            <div class="flex items-center">
+                <a href="#_" class="text-white transition duration-300 ease-out opacity-40 hover:opacity-80">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </a>
+                <a href="#_" class="text-white transition duration-300 ease-out opacity-40 hover:opacity-80">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </div>
+        <div class="grid grid-cols-12 gap-1">
+            <a class="relative flex flex-col items-start justify-end col-span-12 px-5 pb-5 overflow-hidden bg-gray-800 cursor-pointer h-96 md:col-span-6 lg:col-span-3 group">
+
+                <img class="absolute inset-0 object-cover object-center w-full h-full transition duration-300 ease-out transform scale-100 group-hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-1.jpg">
+
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 opacity-90"></span>
+                <span class="bg-purple-500 text-white px-2 py-0.5 inline relative text-xs mb-3 uppercase">Gaming</span>
+                <span class="relative mb-3 text-xl font-bold leading-tight text-white">The Gaming Revolution has Taken Over</span>
+                <span class="relative flex text-xs text-white opacity-90">
+                    <span class="mr-1 font-semibold">John Doe</span>·<span class="ml-1">November 16, 2021</span>
+                </span>
+            </a>
+
+            <a class="relative flex flex-col items-start justify-end col-span-12 px-5 pb-5 overflow-hidden bg-gray-800 cursor-pointer h-96 md:col-span-6 lg:col-span-3 group">
+                <img class="absolute inset-0 object-cover object-center w-full h-full transition duration-300 ease-out transform scale-100 group-hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-2.jpg">
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 opacity-90"></span>
+                <span class="bg-pink-500 text-white px-2 py-0.5 inline relative text-xs mb-3 uppercase">Lifestlye</span>
+                <span class="relative mb-3 text-xl font-bold leading-tight text-white">Learn How to Create Beautiful Photos</span>
+                <span class="relative flex text-xs text-white opacity-90">
+                    <span class="mr-1 font-semibold">Mike Jones</span>·<span class="ml-1">November 12, 2021</span>
+                </span>
+            </a>
+
+            <a class="relative flex flex-col items-start justify-end col-span-12 px-5 pb-5 overflow-hidden bg-gray-800 cursor-pointer h-96 md:col-span-6 lg:col-span-3 group">
+                <img class="absolute inset-0 object-cover object-center w-full h-full transition duration-300 ease-out transform scale-100 group-hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-3.jpg">
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 opacity-90"></span>
+                <span class="bg-red-500 text-white px-2 py-0.5 inline relative text-xs mb-3 uppercase">Cars</span>
+                <span class="relative mb-3 text-xl font-bold leading-tight text-white">The Ultimate List of the Fastest Vehicles</span>
+                <span class="relative flex text-xs text-white opacity-90">
+                    <span class="mr-1 font-semibold">Don Rogers</span>·<span class="ml-1">November 5, 2021</span>
+                </span>
+            </a>
+
+            <a class="relative flex flex-col items-start justify-end col-span-12 px-5 pb-5 overflow-hidden bg-gray-800 cursor-pointer h-96 md:col-span-6 lg:col-span-3 group">
+                <img class="absolute inset-0 object-cover object-center w-full h-full transition duration-300 ease-out transform scale-100 group-hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-4.jpg">
+                <span class="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 opacity-90"></span>
+                <span class="bg-green-500 text-white px-2 py-0.5 inline relative text-xs mb-3 uppercase">Travel</span>
+                <span class="relative mb-3 text-xl font-bold leading-tight text-white">Top Destinations for your Next Vacation</span>
+                <span class="relative flex text-xs text-white opacity-90">
+                    <span class="mr-1 font-semibold">Fred Smith</span>·<span class="ml-1">October 29, 2021</span>
+                </span>
+            </a>
+
+        </div>
+
+        <div class="grid grid-cols-12 gap-10 mt-10">
+
+            <div class="col-span-12 md:col-span-8">
+                <div class="relative overflow-hidden border-b-2 border-purple-500">
+                    <h4 class="px-3 py-1.5 bg-purple-500 text-white uppercase text-sm inline-block font-medium">Gaming</h4>
+                </div>
+
+                <div class="flex items-center py-5 border-b border-gray-900">
+                    <a class="w-1/3 h-40 overflow-hidden">
+                        <img class="w-full h-auto transition duration-300 ease-out transform scale-100 bg-cover hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-5.jpg">
+                    </a>
+                    <div class="w-2/3 pl-5">
+                        <h2 class="relative mb-3 text-xl font-bold leading-tight text-white"><a href="#_">Consoles We Could Have Done Without</a></h2>
+                        <p class="text-sm text-white opacity-50">It's no doubt that in an industry of so much competition, there are going to be some failures. Here are the top failed consoles.</p>
+                        <span class="relative flex mt-3 text-xs text-white opacity-90">
+                            <span class="mr-1 font-semibold">Bob Jenkins</span>·<span class="ml-1">October 29, 2021</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex items-center py-5 border-b border-gray-900">
+                    <a class="w-1/3 h-40 overflow-hidden">
+                        <img class="w-full h-auto transition duration-300 ease-out transform scale-100 bg-cover hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-6.jpg">
+                    </a>
+                    <div class="w-2/3 pl-5">
+                        <h2 class="relative mb-3 text-xl font-bold leading-tight text-white"><a href="#_">VR Gaming That We Love</a></h2>
+                        <p class="text-sm text-white opacity-50">VR has come a long way and there are a few leaders in the industry. In this article we'll talk about those elites.</p>
+                        <span class="relative flex mt-3 text-xs text-white opacity-90">
+                            <span class="mr-1 font-semibold">Bob Jenkins</span>·<span class="ml-1">October 29, 2021</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex items-center py-5 border-b border-gray-900">
+                    <a class="w-1/3 h-40 overflow-hidden">
+                        <img class="w-full h-auto transition duration-300 ease-out transform scale-100 bg-cover hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-7.jpg">
+                    </a>
+                    <div class="w-2/3 pl-5">
+                        <h2 class="relative mb-3 text-xl font-bold leading-tight text-white"><a href="#_">Must-have Games for Xbox</a></h2>
+                        <p class="text-sm text-white opacity-50">We've gathered up a list of the top games ever released for the Xbox. There are some amazing games that have passed throughout the years. See if your favorite are in the list.</p>
+                        <span class="relative flex mt-3 text-xs text-white opacity-90">
+                            <span class="mr-1 font-semibold">Bob Jenkins</span>·<span class="ml-1">October 29, 2021</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex items-center py-5 border-b border-gray-900">
+                    <a class="w-1/3 h-40 overflow-hidden">
+                        <img class="w-full h-auto transition duration-300 ease-out transform scale-100 bg-cover hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-8.jpg">
+                    </a>
+                    <div class="w-2/3 pl-5">
+                        <h2 class="relative mb-3 text-xl font-bold leading-tight text-white"><a href="#_">The Arcade Industry Making a Comeback</a></h2>
+                        <p class="text-sm text-white opacity-50">The arcade industry may be making a huge comeback soon. As trends have been showing the desire for community based gaming is on the rise.</p>
+                        <span class="relative flex mt-3 text-xs text-white opacity-90">
+                            <span class="mr-1 font-semibold">Carl Roberts</span>·<span class="ml-1">October 29, 2021</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-12 md:col-span-4">
+                <div class="relative overflow-hidden border-b-2 border-pink-500">
+                    <h4 class="px-3 py-1.5 bg-pink-500 text-white uppercase text-sm inline-block font-medium">Lifestyle</h4>
+                </div>
+
+                <a href="#_" class="relative block w-full h-64 mt-5 overflow-hidden">
+                    <div class="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 opacity-90"></div>
+                    <img class="object-cover object-bottom w-full h-full transition duration-300 ease-out transform scale-100 hover:scale-105" src="https://cdn.devdojo.com/images/may2021/blog-img-9.jpg">
+                </a>
+                <h2 class="relative mt-5 mb-3 text-xl font-bold leading-tight text-white"><a href="#_">The Ultimate Travelers Guide</a></h2>
+                <p class="text-sm text-white opacity-50">If you want to learn more about how you can travel in style and on a budget, we've put together this awesome guide.</p>
+                <span class="relative flex mt-3 text-xs text-white opacity-90">
+                    <span class="mr-1 font-semibold">Sally Jones</span>·<span class="ml-1">October 29, 2021</span>
+                </span>
+
+                <div class="flex items-center mt-7">
+                    <a href="#_" class="text-white transition duration-300 ease-out opacity-40 hover:opacity-80">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </a>
+                    <a href="#_" class="text-white transition duration-300 ease-out opacity-40 hover:opacity-80">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><section class="w-full bg-gray-50 sm:py-16 py-12 md:py-20 relative">
+    <div class="max-w-7xl mx-auto px-10">
+        <div class="flex flex-col mb-7 sm:mb-20 items-start md:items-center justify-center">
+            <p class="sm:tracking-widest sm:text-base text-sm uppercase font-medium text-gray-500">What people are saying about us</p>
+            <h2 class="text-gray-900 mt-2 text-2xl sm:text-4xl tracking-tight font-bold sm:font-extrabold md:text-5xl dark:text-white lg:bg-black">Don't just take our word for it.</h2>
+            <div class="mt-1 md:mt-4 items-center flex text-blue-600">
+                <svg class="w-8 h-8 sm:block hidden mr-1.5 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                <p class="text-xl md:text-4xl tracking-tight sm:font-bold sm:text-3xl">view our hundreds of testimonials</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-12 gap-6 w-full">
+            <div class="col-span-4 space-y-6">
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/01-john-robertson.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">John Robertson</p>
+                            <p class="font-medium text-gray-400 text-sm">Director of Sales at Workflow</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"Using this service was the best decision I've ever made. We have been able to 10x our output with minimal effort. Love these guys!"</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/02-mike-samson.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Mike Samson</p>
+                            <p class="font-medium text-gray-400 text-sm">CEO at Blocknet</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"I can't express how many times this product has saved my ass on a day-to-day basis!<br><br>Thanks for the awesome product guys. Keep up the great work."</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/03-jack-bennington.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Jack Bennington</p>
+                            <p class="font-medium text-sm text-gray-400">CTO at TNT Solutions</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"Simply Amazing!<br><br>These are the best guys in this field. It's a no-brainer to use them over the competition."</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+            </div>
+
+            <div class="col-span-4 sm:block hidden space-y-5">
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/04-steve-mitchell.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Steve Mitchell</p>
+                            <p class="font-medium text-sm text-gray-400">CEO and Partner at Rakstation</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"Finding the perfect solution for our use-case was easier than ever after we utilized these tools and services. <br><br>The developer API was a delight to work with and the team is always willing to help out. I can't recommend these guys enough!"</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/05-ron-garrison.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Ron Garrison</p>
+                            <p class="font-medium text-sm text-gray-400">Lead Developer at Devworks</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"We had been looking for a good solution to maintain our infastructure, after integration these solutions into our platform we have saved hundreds of hours."</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/06-charlie-madocks.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Charlie Madocks</p>
+                            <p class="font-medium text-sm text-gray-400">Director of Marketing at Goji</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"This team is at the edge of innovation. We are so proud to be one of their longest customers.<br><br>You guys are the best!"</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+            </div>
+
+            <div class="col-span-4 lg:block hidden space-y-5">
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/07-nick-thompson.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Nick Thompson</p>
+                            <p class="font-medium text-sm text-gray-400">CTO at Craftyworks</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"Amazing team and amazing service.<br><br>If you want the best possible chance of succeeding in your business you'll utilize this service and thrive with them!"</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/08-jake-walters.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Jake Walters</p>
+                            <p class="font-medium text-sm text-gray-400">CFO at Edgeworks</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"We couldn't be happier with how easy it was to integrate their service with our application.<br><br>We are now having the best year in sales and customer satisfaction."</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+                <div class="h-auto bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="flex items-center border-b relative border-gray-100 border-solid pb-5 mb-5">
+                        <img src="https://cdn.devdojo.com/images/january2022/09-sam-robinson.jpeg" class="rounded-full mr-3 w-12 h-12">
+                        <div class="relative">
+                            <p class="font-semibold text-gray-600 leading-none my-1">Sam Robinson</p>
+                            <p class="font-medium text-sm text-gray-400">Lead Developer at Socnet</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-400 z-10 leading-7 relative pb-3">"I didn't realize it was this easy to get organized and integrated with their service!"</blockquote>
+                    <svg class="h-auto absolute z-0 top-0 right-0 w-12 opacity-30 mt-6 mr-7 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"></path></svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="bg-gradient-to-t from-gray-50 h-96 w-full bottom-0 left-0 absolute z-20 flex items-end justify-center">
+        <a href="#_" class="mb-12 font-medium text-gray-400 hover:text-gray-500 rounded-lg text-sm flex items-center justify-center">
+            <svg class="w-5 h-5 mr-1.5 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+            <span>View All Testimonials</span>
+        </a>
+    </div>
+</section><section class="py-8 bg-black sm:py-10 md:py-12 lg:py-16 xl:py-20" data-tails-scripts="//unpkg.com/alpinejs">
+    <div class="max-w-6xl px-8 mx-auto lg:px-16">
+        <h2 class="mb-2 text-xl font-bold text-white md:text-3xl">FAQ</h2>
+
+        <div class="relative flex flex-col mt-2 mt-8 lg:flex-row">
+
+            <!-- Left side of FAQs -->
+            <div class="relative w-full lg:w-1/2 lg:pr-12">
+                <!-- Question 1 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Where do I go to upgrade my account?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>You can upgrade your account by visiting The Pro Upgrade Page. You will also gain access to many other applications and sections of the site.</p>
+                </div>
+
+                <!-- Question 2 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>How do I use Tails in my project?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>Implementation in your project is very simple. You can use the exported page as a starting point, or you can copy and paste the HTML into your own page.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>How long will I have access to Tails?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>You will have unlimited access to all your pre-built pages; however, if you want to be able to download and export your pages, you'll need a pro account. Paddle for processing payments.</p>
+                </div>
+
+
+                <!-- Question 4 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>What is the license on the pages?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>You have unlimited use to the templates used in Tails; however, you cannot re-use the templates to sell for others to use.</p>
+                </div>
+            </div>
+
+
+            <!-- Right side of FAQs -->
+            <div class="relative w-full lg:w-1/2 lg:pl-12">
+                <!-- Question 1 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>How Many API Calls Do I Get?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>The free plan will give you 2,000 free API calls. At anytime, if you wish to <a href="#_" class="font-medium text-blue-500 underline" data-primary="blue-500">upgrade to a paid plan</a>, you can eaisily increase that amount.</p>
+                </div>
+
+                <!-- Question 2 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Where Can I Learn More?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>You can learn more about using our API by visiting our <a href="#_" class="font-medium text-blue-500 underline" data-primary="blue-500">Academy page</a> which contains screencasts that will teach you the ins-and-outs of using the API. You may also visit the <a href="#_"  class="font-medium text-blue-500 underline" data-primary="blue-500">developer docs</a> to learn more.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Do You Have Any SDK's?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>Absolutely, we have an SDK for most of the popular languages and frameworks. Be sure to visit our <a href="#_" class="font-medium text-blue-500 underline" data-primary="blue-500">list of SDK's</a> to learn how you can build on top of our service.</p>
+                </div>
+
+
+                <!-- Question 4 -->
+                <div x-data="{ show: false }" class="relative overflow-hidden text-white select-none">
+                    <h4 @click="show=!show" class="flex items-center justify-between py-4 text-lg font-medium text-gray-100 cursor-pointer sm:text-xl hover:text-white">
+                        <span>Can I Become an Affiliate?</span>
+                        <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </h4>
+                    <p class="px-1 pt-0 mt-1 text-gray-300 sm:text-lg py-7"
+                        x-transition:enter="transition-all ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform -translate-y-4"
+                        x-transition:enter-end="opacity-100 transform -translate-y-0"
+                        x-transition:leave="transition-all ease-out hidden duration-200"
+                        x-transition:leave-start="opacity-100 transform -translate-y-0"
+                        x-transition:leave-end="opacity-0 transform -translate-y-4"
+                        x-show="show"
+                        x-cloak>Yes. We are utilizing <a href="https://paddle.com"  class="font-medium text-blue-500 underline" data-primary="blue-500">paddle</a>, which has a fully functional affiliate program. <a href="#_"  class="font-medium text-blue-500 underline" data-primary="blue-500">Click here</a> to signup as an affiliate.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section><section class="py-12 bg-gray-800 md:py-20 bg-gradient-to-b from-gray-800 to-black">
+
+    <div class="max-w-4xl px-10 mx-auto text-left md:text-center pb-14 md:px-0">
+      <h2 class="text-4xl font-bold text-white md:text-5xl">Simple, Transparent Pricing.</h2>
+      <p class="mt-2 text-lg text-gray-400">Simple pricing to fit your needs. Pricing for companies of any size.
+    </div>
+
+    <div class="flex flex-col max-w-4xl mx-auto divide-x-0 divide-gray-800 md:divide-x lg:divide-x-0 md:flex-row lg:space-x-8">
+
+        <div class="w-full md:w-1/2">
+            <div class="relative w-full p-10 overflow-hidden bg-gray-900 shadow-xl lg:rounded-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 to-red-500" data-primary="red-500"></div>
+                <div class="flex items-center justify-between text-gray-200">
+
+                    <div class="relative justif-self-end">
+                        <h2 class="text-2xl font-black text-white">Basic</h2>
+                        <p class="text-xs font-medium uppercase">Plan</p>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="text-5xl text-white">$15</h3>
+                        <div class="flex flex-col ml-3">
+                            <p class="font-medium">per month</p>
+                            <p class="text-sm">Get started for free</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="border-t border-gray-700 h-0.5 my-10 w-full"></div>
+                <ul class="w-full py-2 my-12 space-y-5 text-xl text-gray-300">
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>10,000 requests per month</span>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>3 Team members</span>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>Email Support</span>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>Unlimited Customizations</span>
+                    </li>
+                </ul>
+                <a href="#_" class="relative block w-full py-4 overflow-hidden text-base font-semibold text-center text-gray-800 bg-white rounded-lg" data-rounded="rounded-lg">
+                    <span>Get Started</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2">
+            <div class="relative w-full p-10 overflow-hidden bg-gray-900 shadow-xl lg:rounded-lg" data-rounded="rounded-lg" data-rounded-max="rounded-full">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-500 to-red-500" data-primary="red-500"></div>
+                <div class="flex items-center justify-between text-gray-200">
+
+                    <div class="relative justif-self-end">
+                        <h2 class="text-2xl font-black text-white">Pro</h2>
+                        <p class="text-xs font-medium uppercase">Plan</p>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="text-5xl text-white">$25</h3>
+                        <div class="flex flex-col ml-3">
+                            <p class="font-medium">per month</p>
+                            <p class="text-sm">30-day free trial</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="border-t border-gray-700 h-0.5 my-10 w-full"></div>
+                <ul class="w-full py-2 my-12 space-y-5 text-xl text-gray-300">
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>100,000 requests per month</span>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>Unlimited Team members</span>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>Email Support</span>
+                    </li>
+                    <li class="flex items-center">
+                        <div class="flex items-center justify-center w-8 h-8 mr-3 text-white bg-gray-700 rounded-full">
+                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <span>Unlimited Customizations</span>
+                    </li>
+                </ul>
+                <a href="#_" class="relative block w-full py-4 overflow-hidden text-base font-semibold text-center text-gray-800 bg-white rounded-lg" data-rounded="rounded-lg">
+                    <span>Get Started</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section><section class="py-10 bg-black">
+    <div class="px-10 mx-auto max-w-7xl">
+        <div class="flex flex-col items-center md:flex-row md:justify-between">
+            <a href="#_" class="flex items-center justify-center w-10 h-10 mr-3 rounded-lg mb-7 bg-gradient-to-br from-purple-500 via-indigo-600 to-blue-500 rounded-xxl">
+                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 39 15" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.252 1.152C4.184 2.526.454 6.918.061 14.329c1.963-4.049 4.798-5.975 8.503-5.778 2.115.112 3.84 1.295 5.75 2.603 3.11 2.133 6.712 4.601 13.281 3.324 7.068-1.374 10.798-5.766 11.191-13.177-1.963 4.049-4.798 5.975-8.503 5.779-2.115-.113-3.84-1.296-5.75-2.604-3.11-2.133-6.712-4.601-13.281-3.324z" fill-rule="evenodd"></path>
+                </svg>
+            </a>
+
+            <div class="flex flex-row justify-center mb-4 -ml-4 -mr-4"> <a href="#" class="p-4 text-gray-700 hover:text-gray-400"> <svg class="fill-current" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z"></path>
+                    </svg> </a> <a href="#" class="p-4 text-gray-700 hover:text-gray-400"> <svg class="fill-current" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"></path>
+                    </svg> </a> <a href="#" class="p-4 text-gray-700 hover:text-gray-400"> <svg class="fill-current" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <circle cx="12.145" cy="3.892" r="1"></circle>
+                            <path d="M8 12c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z"></path>
+                            <path d="M12 16H4c-2.056 0-4-1.944-4-4V4c0-2.056 1.944-4 4-4h8c2.056 0 4 1.944 4 4v8c0 2.056-1.944 4-4 4zM4 2c-.935 0-2 1.065-2 2v8c0 .953 1.047 2 2 2h8c.935 0 2-1.065 2-2V4c0-.935-1.065-2-2-2H4z"></path>
+                        </g>
+                    </svg> </a> </div>
+        </div>
+        <div class="flex flex-col justify-between text-center md:flex-row">
+            <p class="order-last text-sm leading-tight text-gray-500 md:order-first"> Crafted with <a href="https://devdojo.com/tails" class="text-white">Tails</a>. Built with ❤️ by our team. </p>
+            <ul class="flex flex-row justify-center pb-3 -ml-4 -mr-4 text-sm">
+                <li> <a href="#_" class="px-4 text-gray-500 hover:text-white">Contact</a> </li>
+                <li> <a href="#_" class="px-4 text-gray-500 hover:text-white">About US</a> </li>
+                <li> <a href="#_" class="px-4 text-gray-500 hover:text-white">FAQ's</a> </li>
+                <li> <a href="#_" class="px-4 text-gray-500 hover:text-white">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
